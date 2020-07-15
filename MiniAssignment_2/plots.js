@@ -3,7 +3,7 @@ var sortedData = data.sort((firstNum, lastNum) => lastNum.greekSearchResults-fir
 console.log(sortedData)
 
 // Slice the first 10 objects for plotting
-var finalData = sortedData.splice(0,10);
+var finalData = sortedData.slice(0,10);
 console.log(finalData);
 
 // Reverse the array to accommodate Plotly's defaults

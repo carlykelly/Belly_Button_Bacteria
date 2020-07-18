@@ -26,11 +26,24 @@ function optionChanged(value){
           y: otuIds.reverse(),
           text: otuLabels.reverse(),
           type: 'bar',
-          orientation: 'h'
+          orientation: 'h',
+          marker: {
+          color: 'rgb(24,78,155)'
+          }
+          //colorscale: "Earth"
+
         }
       ];
+
+      var layoutbar ={
+        title: "Top 10 Bacteria by Sample Value",
+        margin: {
+          t: 30,
+          l: 150,      
+        }
+      }
       
-      Plotly.newPlot('bar', data);
+      Plotly.newPlot('bar', data, layoutbar);
 // Creating random colors for otu_ids
 colors = []
 for (var i = 0; i < tableData.otu_ids.length; i++) {
@@ -46,7 +59,8 @@ for (var i = 0; i < tableData.otu_ids.length; i++) {
         text: tableData.otu_labels.map(d => d.replace(/;/g, ' ')),
         marker: {
           color: tableData.otu_ids,
-          size: tableData.sample_values
+          size: tableData.sample_values,
+          colorscale: "Blues"
         },
         mode: 'markers'
       };
@@ -54,7 +68,8 @@ for (var i = 0; i < tableData.otu_ids.length; i++) {
       var data = [trace1];
       
       var layout = {
-        xaxis: {title: 'OTU ID'}
+        xaxis: {title: 'OTU ID'},
+        title: 'All Bacteria by Sample Count'
       };
       
       Plotly.newPlot('bubble', data, layout);
@@ -136,15 +151,15 @@ var data = [
       marker: {
           colors: [
             "rgba(255, 255, 255, 0)",
-            "rgba(118, 215, 196, .5)",
-            "rgba(163, 228, 215, .5)",
-            "rgba(209, 242, 235, .5)",
-            "rgba(232, 248, 245, .5)", 
-            "rgba(232, 248, 245, .5)",
-            "rgba(252, 243, 207, .5)",
-            "rgba(249, 231, 159, .5)",
-            "rgba(247, 220, 111, .5)",
-            "rgba(244, 208, 63, .5)",
+            "rgb(0,79,198)",//"rgba(118, 215, 196, .5)",
+            "rgb(20,93,204)",//"rgba(163, 228, 215, .5)",
+            "rgb(41,109,209)",//"rgba(209, 242, 235, .5)",
+            "rgb(64,124,215)",//"rgba(232, 248, 245, .5)", 
+            "rgb(88,141,221)",//"rgba(232, 248, 245, .5)",
+            "rgb(113,158,226)",//"rgba(252, 243, 207, .5)",
+            "rgb(166,195,238)",//"rgba(249, 231, 159, .5)",
+            "rgb(194,214,243)",//"rgba(247, 220, 111, .5)",
+            "rgb(224,234,249)",//"rgba(244, 208, 63, .5)",
             "rgba(255, 255, 255, 0)",
             "rgba(255, 255, 255, 0)",
             "rgba(255, 255, 255, 0)",

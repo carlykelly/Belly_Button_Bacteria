@@ -86,33 +86,6 @@ for (var i = 0; i < tableData.otu_ids.length; i++) {
 
   // Completing the Guage Chart
 
-//  var data = [
-//     {
-//       domain: { x: [0, 1], y: [0, 1] },
-//       value: metaData.wfreq,
-//       title: { text: "Belly Button Scrubs Per Week" },
-//       type: "indicator",
-//       mode: "gauge+number",
-//       gauge: {
-//         axis: { range: [null, 9] },
-//         steps: [
-//           { range: [0, 1], color: "rgb(244, 208, 63)" },
-//           { range: [1, 2], color: "rgb(247, 220, 111)" },
-//           { range: [2, 3], color: "rgb(249, 231, 159 )" },
-//           { range: [3, 4], color: "rgb(252, 243, 207)" },
-//           { range: [4, 5], color: "rgb(232, 248, 245)" },
-//           { range: [5, 6], color: "rgb(232, 248, 245)" },
-//           { range: [6, 7], color: "rgb(209, 242, 235)" },
-//           { range: [7, 8], color: "rgb(163, 228, 215)" },
-//           { range: [8, 9], color: "rgb(118, 215, 196)" },
-//         ],
-
-//       }
-//     }
-//   ];
-  
-
-//   Plotly.newPlot('gauge', data);
 function buildGauge(wfreq) {
   // Enter the washing frequency between 0 and 180
   var level = parseFloat(wfreq) * 20;
@@ -151,15 +124,15 @@ var data = [
       marker: {
           colors: [
             "rgba(255, 255, 255, 0)",
-            "rgb(0,79,198)",//"rgba(118, 215, 196, .5)",
-            "rgb(20,93,204)",//"rgba(163, 228, 215, .5)",
-            "rgb(41,109,209)",//"rgba(209, 242, 235, .5)",
-            "rgb(64,124,215)",//"rgba(232, 248, 245, .5)", 
-            "rgb(88,141,221)",//"rgba(232, 248, 245, .5)",
-            "rgb(113,158,226)",//"rgba(252, 243, 207, .5)",
-            "rgb(166,195,238)",//"rgba(249, 231, 159, .5)",
-            "rgb(194,214,243)",//"rgba(247, 220, 111, .5)",
-            "rgb(224,234,249)",//"rgba(244, 208, 63, .5)",
+            "rgb(0,79,198)",
+            "rgb(20,93,204)",
+            "rgb(41,109,209)",
+            "rgb(64,124,215)",
+            "rgb(88,141,221)",
+            "rgb(113,158,226)",
+            "rgb(166,195,238)",
+            "rgb(194,214,243)",
+            "rgb(224,234,249)",
             "rgba(255, 255, 255, 0)",
             "rgba(255, 255, 255, 0)",
             "rgba(255, 255, 255, 0)",

@@ -214,7 +214,7 @@ buildGauge(metaData.wfreq);
 }
 
 //Reading in json file
-d3.json('/samples.json').then(function(data) {
+d3.json('./samples.json').then(function(data) {
     console.log(data);
     bellyData = data
     ids = data.metadata.map(d => d.id)

@@ -11,7 +11,6 @@ function optionChanged(value){
     var otuIds = tableData.otu_ids.slice(0,10);
     var sampleValues = tableData.sample_values.slice(0,10);
     var otuLabels = tableData.otu_labels.slice(0,10)
-    console.log(otuLabels);
 // Reformatting y-axis and hover text
     otuLabels = otuLabels.map(d => d.replace(/;/g, ' '))
      otuIds = otuIds.map(d => `OTU ${d}`)

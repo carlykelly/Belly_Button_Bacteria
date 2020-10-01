@@ -4,7 +4,6 @@ var MetaData
 // Discovering the patient ID after user has clicked
 function optionChanged(value){
     var patientID = value
-    console.log(patientID)
 // Find corresponding information based on selected user
     tableData = bellyData.samples.filter(d => d.id == patientID)
     tableData = tableData[0]

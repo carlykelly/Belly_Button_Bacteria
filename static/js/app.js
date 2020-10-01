@@ -10,7 +10,6 @@ function optionChanged(value){
 //Finding the 10 highest Sample Values
     var otuIds = tableData.otu_ids.slice(0,10);
     var sampleValues = tableData.sample_values.slice(0,10);
-    console.log(sampleValues)
     var otuLabels = tableData.otu_labels.slice(0,10)
     console.log(otuLabels);
 // Reformatting y-axis and hover text

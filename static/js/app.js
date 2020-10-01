@@ -7,7 +7,6 @@ function optionChanged(value){
 // Find corresponding information based on selected user
     tableData = bellyData.samples.filter(d => d.id == patientID)
     tableData = tableData[0]
-    console.log(tableData)
 //Finding the 10 highest Sample Values
     var otuIds = tableData.otu_ids.slice(0,10);
     console.log(otuIds)

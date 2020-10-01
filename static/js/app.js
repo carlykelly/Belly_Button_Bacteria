@@ -146,7 +146,6 @@ var data = [
     }
   ];
 
-
   var layout = {
     shapes: [
       {
